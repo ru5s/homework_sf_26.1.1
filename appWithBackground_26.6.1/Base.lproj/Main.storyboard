@@ -1,24 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="appWithBackground_26_6_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rnx-gB-MUg">
+                                <rect key="frame" x="20" y="261" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="374" id="CqY-cd-Kr8"/>
+                                    <constraint firstAttribute="width" constant="374" id="xMB-Po-625"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="o73-t7-cJC">
+                                <rect key="frame" x="345" y="44" width="49" height="55.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5Y-rs-lL8">
+                                        <rect key="frame" x="10.5" y="0.0" width="38.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qyj-Ym-Qhq">
+                                        <rect key="frame" x="0.0" y="24.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchThemeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="mmp-4i-gJc"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-nk-XDU">
+                                <rect key="frame" x="142" y="706" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Qkf-LA-6cZ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Alternative shift">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionAlternativeShiftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uj8-7y-clA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternative change color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh1-uT-sYD">
+                                <rect key="frame" x="114.5" y="671" width="185" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rnx-gB-MUg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Xi-GK-xiH"/>
+                            <constraint firstItem="o73-t7-cJC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3k6-Mb-8Cb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o73-t7-cJC" secondAttribute="trailing" constant="20" id="5Yt-nH-PbI"/>
+                            <constraint firstItem="dh1-uT-sYD" firstAttribute="top" secondItem="rnx-gB-MUg" secondAttribute="bottom" constant="36" id="7ez-AM-6xm"/>
+                            <constraint firstItem="wHV-nk-XDU" firstAttribute="top" secondItem="dh1-uT-sYD" secondAttribute="bottom" constant="14.5" id="EgQ-sk-b4L"/>
+                            <constraint firstItem="wHV-nk-XDU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MDy-ZI-oDC"/>
+                            <constraint firstItem="dh1-uT-sYD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SNu-xy-3Ih"/>
+                            <constraint firstItem="rnx-gB-MUg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e25-3F-nyc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alternaitiveShiftButton" destination="wHV-nk-XDU" id="nHC-nj-SWh"/>
+                        <outlet property="labelAboveAltBtn" destination="dh1-uT-sYD" id="Ybd-iJ-a5S"/>
+                        <outlet property="labelOfTheme" destination="v5Y-rs-lL8" id="L72-oh-9ij"/>
+                        <outlet property="mainImageView" destination="rnx-gB-MUg" id="E1h-9u-udV"/>
+                        <outlet property="switchTheme" destination="Qyj-Ym-Qhq" id="BCV-Xf-AO9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
